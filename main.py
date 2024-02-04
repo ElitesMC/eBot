@@ -18,4 +18,4 @@ async def test(i: discord.Interaction):
   except Exception as e:
     await i.response.send_message("Errore")
     raise e
-client.run("MTIwMzY3MDY1MTQ1ODU1NTkyNA.GrqS3H.dl_BPk-L1bL9Twe4sjVp17nHC2JhhIQv9SHT-I")
+
