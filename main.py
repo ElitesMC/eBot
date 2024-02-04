@@ -5,16 +5,15 @@ from discord.ext import commands
 
 client = commands.Bot(command_prefix="e!", intents=discord.Intents().all())
 
-sync = await client.tree.sync()
 @client.event
 async def on_ready():
   
   print("Bot online")
-  print("Comandi slash:" + sync)
+  await client.tree.sync()
 @client.tree.command(description="Test")
 async def test(i: discord.Interaction):
   try:
-    await i.response.send_message("Sono vivo! I miei comandi slash sono: " + sync)
+    await i.response.send_message("Sono vivo!)
   except Exception as e:
     await i.response.send_message("Errore")
     raise e
